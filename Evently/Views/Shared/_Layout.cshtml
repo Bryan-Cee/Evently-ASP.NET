@@ -26,6 +26,9 @@
                         <li class="nav-item @(ViewBag.Title == "Events" ? "active" : "")">
                             @Html.ActionLink("Events", "Index", "Event", null, new { @class = "nav-link" })
                         </li>
+                        <li class="nav-item @(ViewBag.Title == "Site" ? "active" : "")">
+                            @Html.ActionLink("Sites", "Index", "Site", null, new { @class = "nav-link" })
+                        </li>
                     </ul>
                     @Html.Partial("_LoginPartial")
                 </div>

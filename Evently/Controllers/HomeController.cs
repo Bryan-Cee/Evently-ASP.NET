@@ -10,8 +10,6 @@ namespace Evently.Controllers
     {
         public ActionResult Index()
         {
-            ViewBag.Message = "Hello world";
-
             return View();
         }
     }

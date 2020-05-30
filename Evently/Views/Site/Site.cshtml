@@ -1,0 +1,45 @@
+﻿@model IEnumerable<Evently.Models.SiteModel>
+
+@{
+    ViewBag.Title = "Site";
+}
+
+<h2>Site</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.SiteName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SiteCapacity)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SiteBooked)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.SiteName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SiteCapacity)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SiteBooked)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+
+</table>

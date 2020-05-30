@@ -1,30 +1,48 @@
 ﻿using Evently.Models;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.Mvc;
+using EventlyDataLibrary;
+using EventlyDataLibrary.BusinessLogic;
 
 namespace Evently.Controllers
 {
     public class EventController : Controller
     {
-        public List<EventModel> events { get; set; }
         // GET: Event
         public ActionResult Index()
         {
-            events = new List<EventModel>
+            var data = EventProcessor.LoadEvents();
+
+            List<EventModel> events = new List<EventModel>();
+
+            foreach (var row in data)
             {
-                new EventModel { EventName = "Microsoft Build", EventDescription = "Just a meet up for developers", EventDate = DateTime.Now },
-                new EventModel { EventName = "Google IO", EventDescription = "Google IO meet up for new things", EventDate = new DateTime(2010, 1, 1, 8, 0, 15) },
-                new EventModel { EventName = "Amazon Webinar", EventDescription = "Anything AWS", EventDate = DateTime.Now }
-            };
+                events.Add(new EventModel
+                {
+                    EventName = row.EventName,
+                    EventDescription = row.EventDescription,
+                    EventDate = row.EventDate
+                });
+            }
 
             return View(events);
         }
 
         public ActionResult CreateEvent()
         {
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult CreateEvent(EventModel model)
+        {
+            if(ModelState.IsValid)
+            {
+                int rec = EventProcessor.CreateEvent(model.EventName, model.EventDescription, model.EventDate);
+                return RedirectToAction("Index");
+            }
             return View();
         }
     }

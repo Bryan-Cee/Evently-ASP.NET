@@ -5,6 +5,10 @@ VisualStudioVersion = 16.0.30104.148
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Evently", "Evently\Evently.csproj", "{45356C45-8A13-4971-8C2E-51AAF6F76031}"
 EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "EventlyDB", "EventlyDB\EventlyDB.sqlproj", "{DC7E3A53-B137-412E-8DA7-8E058FB896ED}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventlyDataLibrary", "EventlyDataLibrary\EventlyDataLibrary.csproj", "{56254B03-A6B5-48C6-B49E-31294DD06E9D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,16 @@ Global
 		{45356C45-8A13-4971-8C2E-51AAF6F76031}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{45356C45-8A13-4971-8C2E-51AAF6F76031}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{45356C45-8A13-4971-8C2E-51AAF6F76031}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DC7E3A53-B137-412E-8DA7-8E058FB896ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC7E3A53-B137-412E-8DA7-8E058FB896ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC7E3A53-B137-412E-8DA7-8E058FB896ED}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{DC7E3A53-B137-412E-8DA7-8E058FB896ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC7E3A53-B137-412E-8DA7-8E058FB896ED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DC7E3A53-B137-412E-8DA7-8E058FB896ED}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{56254B03-A6B5-48C6-B49E-31294DD06E9D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{56254B03-A6B5-48C6-B49E-31294DD06E9D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{56254B03-A6B5-48C6-B49E-31294DD06E9D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{56254B03-A6B5-48C6-B49E-31294DD06E9D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -33,12 +33,9 @@
                 @Html.DisplayFor(modelItem => item.EventDescription)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.EventDate)
-            </td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+                <span class="hasDatepicker">
+                    @Html.DisplayFor(modelItem => item.EventDate)
+                </span>
             </td>
         </tr>
     }
